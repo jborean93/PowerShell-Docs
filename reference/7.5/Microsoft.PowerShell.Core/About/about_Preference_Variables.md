@@ -977,6 +977,8 @@ The valid values are as follows:
 
 ## $PSApplicationOutputEncoding
 
+This variable was introduced in PowerShell 7.5-preview.
+
 Determines the character encoding method that PowerShell uses when it reads
 text from an external application on the stdout or stderr pipe.
 
