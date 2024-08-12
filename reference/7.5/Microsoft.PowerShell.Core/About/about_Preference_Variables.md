@@ -119,7 +119,8 @@ Cmdlets and functions are assigned a risk of **High**, **Medium**, or **Low**.
 When the value of the `$ConfirmPreference` variable is less than or equal to
 the risk assigned to a cmdlet or function, PowerShell automatically prompts you
 for confirmation before running the cmdlet or function. For more information
-about assigning a risk to cmdlets or functions, see [about_Functions_CmdletBindingAttribute][66].
+about assigning a risk to cmdlets or functions, see
+[about_Functions_CmdletBindingAttribute][66].
 
 If the value of the `$ConfirmPreference` variable is **None**, PowerShell never
 automatically prompts you before running a cmdlet or function.
@@ -167,11 +168,12 @@ Cmdlets and functions that might pose a risk to the system have a **Confirm**
 parameter that you can use to request or suppress confirmation for a single
 command.
 
-Most cmdlets and functions keep the default value of **Medium** for **ConfirmImpact**.
-`$ConfirmPreference` is set to **High** by default. Therefore, it's rare that commands
-automatically prompt for confirmation when users don't specify the **Confirm** parameter.
-To extend automatic confirmation prompting to more cmdlets and functions, set the value
-of `$ConfirmPreference` to **Medium** or **Low**.
+Most cmdlets and functions keep the default value of **Medium** for
+**ConfirmImpact**. `$ConfirmPreference` is set to **High** by default.
+Therefore, it's rare that commands automatically prompt for confirmation when
+users don't specify the **Confirm** parameter. To extend automatic confirmation
+prompting to more cmdlets and functions, set the value of `$ConfirmPreference`
+to **Medium** or **Low**.
 
 ### Examples
 
@@ -394,8 +396,8 @@ The valid values are as follows:
 - **SilentlyContinue**: No effect. The error message isn't displayed and
   execution continues without interruption.
 - **Stop**: Displays the error message and stops executing. In addition to the
-  error generated, the **Stop** value generates an ActionPreferenceStopException
-  object to the error stream.
+  error generated, the **Stop** value generates an
+  ActionPreferenceStopException object to the error stream.
 - **Suspend**: Automatically suspends a workflow job to allow for further
   investigation. After investigation, the workflow can be resumed. The
   **Suspend** value is intended for per-command use, not for use as saved
@@ -978,25 +980,26 @@ The valid values are as follows:
 Determines the character encoding method that PowerShell uses when it reads
 text from an external application on the stdout or stderr pipe.
 
-For example, if an application writes text in an encoding that is different
+For example, if an application writes text in an encoding that's different
 from `[Console]::OutputEncoding`, you can set this variable to the encoding
-that is used by that application.
+that's used by that application.
 
 > [!NOTE]
 > This only applies when PowerShell is set to capture the stdout or stderr of
-> the application being invoked, for example it is being saved into a
+> the application being invoked, for example it's being saved into a
 > variable or piped into a PowerShell function.
 
 Unlike `[Console]::OutputEncoding`, `$PSApplicationOutputEncoding` is scoped
-and will not change a process wide setting allowing it to be used in code
-running in parallel scriptblock.
+and won't change a process wide setting allowing it to be used in code running
+in parallel scriptblock.
 
 Well known examples of applications that use a fixed encoding rather than
 `[Console]::OutputEncoding` are:
 
-+ `wsl.exe` - Always uses [**UnicodeEncoding**][63]
-+ `winget.exe` - Always uses [**UTF8Encoding**][66]
-+ `python.exe` - Uses the Windows locale encoding or [**UTF8Encoding**][66] if the UTF-8 flags are set
+- `wsl.exe` - Always uses [**UnicodeEncoding**][63]
+- `winget.exe` - Always uses [**UTF8Encoding**][66]
+- `python.exe` - Uses the Windows locale encoding or [**UTF8Encoding**][66] if
+  the UTF-8 flags are set
 
 The valid values are as follows: Objects derived from an Encoding class, such
 as [**ASCIIEncoding**][62], [**UTF7Encoding**][65], [**UTF8Encoding**][66],
@@ -1324,8 +1327,8 @@ The valid values are as follows:
 - **Inquire**: Displays the verbose message and then displays a prompt that
   asks you whether you want to continue.
 - **Continue**: Displays the verbose message and then continues with execution.
-- **SilentlyContinue**: (Default) Doesn't display the verbose message. Continues
-  executing.
+- **SilentlyContinue**: (Default) Doesn't display the verbose message.
+  Continues executing.
 
 You can use the **Verbose** common parameter of a cmdlet to display or hide the
 verbose messages for a specific command. For more information, see
